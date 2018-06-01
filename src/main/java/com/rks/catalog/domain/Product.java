@@ -26,6 +26,9 @@ public class Product {
 	@NotNull
 	ProductType type;
 	
+	public Product() {
+	}
+
 	public Product(final Long id, final String name, final Double price, final ProductType type) {
 		this.id = id;
 		this.name = name;

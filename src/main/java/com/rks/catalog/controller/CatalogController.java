@@ -39,7 +39,7 @@ public class CatalogController {
 	}
 	
 	@RequestMapping(value = "/products/{type}", method = RequestMethod.GET, produces={"application/json"})
-	public List<Product> listProducts(@PathVariable ProductType type) {
+	public List<Product> listProducts(@PathVariable(value = "type") ProductType type) {
 		LOGGER.debug("Received request to list products of type: " + type.toString());
 		return catalogService.getProducts(type);
 	}
